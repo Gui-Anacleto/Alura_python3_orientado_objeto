@@ -12,21 +12,21 @@ class Conta:
         print("Construindo objeto...{}".format(self))
         #self sabe o endereço, então "." = vamos para lá.
 
-        self.titular = titular
-        self.saldo = saldo
-        self.numero = numero
-        self.limite = limite
+        self.__titular = titular
+        self.__saldo = saldo
+        self.__numero = numero
+        self.__limite = limite
     
     #funções usadas m teste_procedure.py irão virar METODOS
     def extrato(self):
-        print("Titular: {} \nSaldo: {} \nNumero: {} \nLimite: {}".format(self.titular, self.saldo, self.numero, self.limite))
+        print("Titular: {} \nSaldo: {} \nNumero: {} \nLimite: {}".format(self.__titular, self.__saldo, self.__numero, self.__limite))
         # conta.extrato()
         # conta2.extrato()
 
     def deposita(self, valor):
-        self.saldo += valor
+        self.__saldo += valor
 
     def saca(self, valor):
-        self.saldo -= valor
+        self.__saldo -= valor
 
 
